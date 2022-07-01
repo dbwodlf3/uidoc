@@ -1,0 +1,44 @@
+{
+  "name": "uidoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./scripts/start-server.ts",
+    "start-docker": "ts-node ./scripts/start-docker.ts",
+    "reset-docker": "ts-node ./scripts/reset-docker.ts",
+    "install-package": "ts-node ./scripts/install-package.ts",
+    "build-client": "npx gulp buildClient",
+    "watch-client": "npx gulp watchClient"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/connect-livereload": "^0.6.0",
+    "@types/livereload": "^0.9.2",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.23",
+    "@types/nunjucks": "^3.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "glob": "^8.0.1",
+    "gulp": "^4.0.2",
+    "gulp-buffer": "0.0.2",
+    "gulp-concat": "^2.6.1",
+    "ts-node": "^10.7.0",
+    "tsify": "^5.0.4",
+    "typescript": "^4.6.3",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^4.0.0"
+  }
+}

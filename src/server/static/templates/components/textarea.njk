@@ -1,0 +1,40 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Input </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div"> TextArea </div> 
+{% endblock %}
+
+{% block Component %}
+  <textarea-component id="TextAreaExample" label="Description"></textarea-component>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a text area Component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <textarea-component id="TextAreaExample" label="Description"></textarea-component>
+  <script>
+    const text_area = document.getElementById("TextAreaExample");
+    text_area.addEventListener("click", ()=>{
+      console.log(text_area.value);
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const text_area = document.getElementById("TextAreaExample");
+  text_area.addEventListener("click", ()=>{
+    console.log(text_area.value);
+  });
+</script>
+{% endblock %}

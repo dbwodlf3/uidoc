@@ -1,0 +1,42 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Input </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div"> Button </div> 
+{% endblock %}
+
+{% block Component %}
+  <icon-selector label="Click Me"></icon-selector>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a button component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <button-component> id="ButtonExample" label="Click Me"><button-component>
+  <script>
+    const button = document.getElementById("ButtonExample");
+    console.log(button);
+    button.addEventListener("click", ()=>{
+      window.alert("Clicked.");
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const button = document.getElementById("ButtonExample");
+  console.log(button);
+  button.addEventListener("click", ()=>{
+    window.alert("Clicked.");
+  });
+</script>
+{% endblock %}
